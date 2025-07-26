@@ -1,0 +1,22 @@
+zip-c2-simulation/
+│
+├─ webserver/
+│   └─ serve_zip.py (logs downloads, serves ZIP)
+│
+├─ zip_generator/
+│   └─ generate_zip.py (creates ZIP with payload)
+│
+├─ malware_simulator/
+│   └─ payload.py (phones home when executed)
+│
+├─ c2_server/
+│   └─ c2_server.py (receives "handshake", sends dummy commands)
+│
+├─ docs/
+│   ├─ diagrams.mmd (mermaid or PlantUML diagrams)
+│   └─ example_logs/
+│
+├─ README.md
+├─ LICENSE
+├─ .gitignore
+├─ requirements.txt
