@@ -1,8 +1,4 @@
-Flask==2.0.1
-request
-send_file
-send_from_directory
-jsonify
-abort
-os
-logging
+Flask>=2.0.1
+
+# Standard libraries like os and logging should not be listed here.
+# Functions like request, abort, etc., are part of the Flask package.
