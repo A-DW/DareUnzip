@@ -63,9 +63,14 @@ def download_zip():
 
     # Log request details (as outlined in the initial comments)
     print(f"--- New Download Request ---")
-    print(f"IP address: {request.remote_addr}")
-    print(f"User-Agent: {request.user_agent}")
-    print(f"Servicing file: {zip_file}")
+    print(f"IP address: {request.remote_addr}") # Client's IP address
+    print(f"Timestamp: {request.date}") # Timestamp of the request
+    print(f"User-Agent: {request.user_agent}") # User-Agent of the client
+    print(f"Servicing file: {zip_file}") # Name of the file being served
+    print(f"File size: {os.path.getsize(full_zip_path)} bytes") # Size of the file
+    print(f"Referrer: {request.referrer}") # Referrer URL if available
+    print(f"HTTP Method: {request.method}") # HTTP method used (GET, POST, etc.)
+    print(f"Response Headers: {dict(request.headers)}") # Request headers
     print("-" * 40 + "\n")
 
     # Use send_form_directory for security. It prevents path traversal attacks.

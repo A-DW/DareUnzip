@@ -1,0 +1,8 @@
+sequenceDiagram
+    User->>WebServer: Download ZIP
+    WebServer->>Log: Store IP, tim, user-agent
+    User->>Extract: Unzip archive
+    User->>Payload: Execute script
+    Payload->>C2Server: POST system info (handshake)
+    C2Server->>Log: Store handshake
+    C2Server->>Payload: Respond (fake command/ACK)
