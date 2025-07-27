@@ -67,4 +67,4 @@ All commands should be run from the root directory of the project.
 
 You will see log messages on the Web Server terminal when the file is downloaded, and on the C2 Server terminal when the payload connects back.
 
-> **Disclaimer:** This project is for educational purposese only. It is a simulation designed to demonstrate a common malware delivery and operation pattern. Do not use any part of this project for malicious activities. The author is nor responsible for any misuse of this code.
+> **Disclaimer:** This project is for educational purposese only. It is a simulation designed to demonstrate a common malware delivery and operation pattern. Do not use any part of this project for malicious activities. The author is not responsible for any misuse of this code.
