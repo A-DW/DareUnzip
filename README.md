@@ -2,6 +2,13 @@
 
 This project is a simulation of a common malware delivery and operation pattern. This project demonstrates how a payload can be packaged, delivered via a web server, and establish a connection back to a Command and Control (C2) server.
 
+# SOME IMPORTANT REFERENCIES
+ - https://stackoverflow.com/questions/4271740/how-can-i-use-python-to-get-the-system-hostname
+ - https://github.com/ifaddr/ifaddr
+ - https://www.geeksforgeeks.org/python/getting-the-time-since-os-startup-using-python/
+ - https://www.codespeedy.com/how-to-get-mac-address-of-a-device-in-python/#:~:text=To%20get%20the%20MAC%20address%20of%20a%20device,function%20returns%20the%20MAC%20address%20as%20an%20integer.
+ - https://stackoverflow.com/questions/159137/getting-mac-address
+ - https://www.bing.com/search?q=get%20mac%20addresses%20with%20python%20on%20windows%20and%20ubuntu&qs=n&form=QBRE&sp=-1&lq=0&pq=get%20mac%20addresses%20with%20python%20on%20windows%20and%20ubuntu&sc=12-51&sk=&cvid=936CF44DC8FE4B5CB879E6A5F6287602&ntref=1
 ## Architecture
 
 The project is divided into four main components:
