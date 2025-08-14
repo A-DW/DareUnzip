@@ -1,14 +1,27 @@
-# DareUnzip
+# DareUnzip (Under Construction)
 
 This project is a simulation of a common malware delivery and operation pattern. This project demonstrates how a payload can be packaged, delivered via a web server, and establish a connection back to a Command and Control (C2) server.
 
-# SOME IMPORTANT REFERENCIES
- - https://stackoverflow.com/questions/4271740/how-can-i-use-python-to-get-the-system-hostname
- - https://github.com/ifaddr/ifaddr
- - https://www.geeksforgeeks.org/python/getting-the-time-since-os-startup-using-python/
- - https://www.codespeedy.com/how-to-get-mac-address-of-a-device-in-python/#:~:text=To%20get%20the%20MAC%20address%20of%20a%20device,function%20returns%20the%20MAC%20address%20as%20an%20integer.
- - https://stackoverflow.com/questions/159137/getting-mac-address
- - https://www.bing.com/search?q=get%20mac%20addresses%20with%20python%20on%20windows%20and%20ubuntu&qs=n&form=QBRE&sp=-1&lq=0&pq=get%20mac%20addresses%20with%20python%20on%20windows%20and%20ubuntu&sc=12-51&sk=&cvid=936CF44DC8FE4B5CB879E6A5F6287602&ntref=1
+## Features
+
+The `malware_simulator/payload.py`script collects and displays detailed system information in a formatted table including:
+
+- Hostname
+- In-use user and all logged-in users (with terminal, host and login time)
+- Timezone and locale settings
+- System uptime
+- Networking interfaces, IP Address, and MAC addresses
+- Wi-Fi SSID  (placeholder)
+- OS name, architecture and kernel version
+- CPU info and usage
+- Memory (total, used, free)
+- Disk partitions and usage
+- Top 10 running processes by memory
+- Environment variables
+- Firewall status (placeholder)
+
+Wehn running, the script will promtp the user to choose whether to display MAC address information before showing the system information table.
+
 ## Architecture
 
 The project is divided into four main components:
@@ -16,8 +29,8 @@ The project is divided into four main components:
 1.  **Zip Generator (`zip_generator/`):** A Python script that packages the `payload.py` into a `malicious.zip` file.
 2.  **Web Server (`webserver/`):** A Flask-based web server that hosts the `malicious.zip` file and logs download requests.
 3.  **Malware Simulator (`malware_simulator/`):** The `payload.py` script that, when executed on a target machine, check if the OS is Windows or a Debian-based Linux Distribution (like **Ubuntu[1]**). If compatible, it will "phone home" to the C2 server.
-     - **[1]Note:** It is **HIGHLY RECOMMENDED** to use Ubuntu, since it was this project was specifically designed for. You can still *try* to run other Debian-based Linux distros, but don't expect to this project function properly.
-4.  **C2 Server (`c2_server/`):** A server that listens for incoming connections from the payload, logs the interaction, and can send back commands.
+     - **IF USING LINUX[1]:** It is **HIGHLY RECOMMENDED** to use Ubuntu, since it was this project was specifically designed for. You can still *try* to run other Debian-based Linux distros, but don't expect to this project function properly.
+4.  **C2 Server (`c2_server/`):** Listens for incoming connections from the payload, logs the interaction, and can send back commands.
 
 A visual diagram of this flow can be found in `docs/diagram.mmd`.
 
@@ -74,4 +87,4 @@ All commands should be run from the root directory of the project.
 
 You will see log messages on the Web Server terminal when the file is downloaded, and on the C2 Server terminal when the payload connects back.
 
-> **Disclaimer:** This project is for educational purposese only. It is a simulation designed to demonstrate a common malware delivery and operation pattern. Do not use any part of this project for malicious activities. The author is not responsible for any misuse of this code.
+> **Disclaimer:** This project is for educational purposes only. It is a simulation designed to demonstrate a common malware delivery and operation pattern. Do not use any part of this project for malicious activities. The author is not responsible for any misuse of this code.
