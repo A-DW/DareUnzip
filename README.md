@@ -2,6 +2,20 @@
 
 This project is a simulation of a common malware delivery and operation pattern. This project demonstrates how a payload can be packaged, delivered via a web server, and establish a connection back to a Command and Control (C2) server.
 
+## Indice
+
+- [Overview](#overview)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Setup](#setup)
+- [Usage](#usage)
+
+---
+
+## Overview
+
+This project simulates a typical malware payload that collects system information and prints it in a formatted table. **No malicious actions are performed.**
+
 ## Features
 
 The `malware_simulator/payload.py`script collects and displays detailed system information in a formatted table including:
@@ -11,16 +25,17 @@ The `malware_simulator/payload.py`script collects and displays detailed system i
 - Timezone and locale settings
 - System uptime
 - Networking interfaces, IP Address, and MAC addresses
-- Wi-Fi SSID  (placeholder)
+- Wi-Fi/Ethernet SSID (if available)
 - OS name, architecture and kernel version
 - CPU info and usage
 - Memory (total, used, free)
 - Disk partitions and usage
 - Top 10 running processes by memory
-- Environment variables
+- Environment variables (first 15, truncated for readability)
+- Detailed network information (all interfaces and addresses)
 - Firewall status (placeholder)
 
-Wehn running, the script will promtp the user to choose whether to display MAC address information before showing the system information table.
+When running, the script will prompt the user to choose whether to display MAC address information before showing the system information table.
 
 ## Architecture
 
@@ -88,3 +103,7 @@ All commands should be run from the root directory of the project.
 You will see log messages on the Web Server terminal when the file is downloaded, and on the C2 Server terminal when the payload connects back.
 
 > **Disclaimer:** This project is for educational purposes only. It is a simulation designed to demonstrate a common malware delivery and operation pattern. Do not use any part of this project for malicious activities. The author is not responsible for any misuse of this code.
+
+---
+
+**This project is for educational and demonstration purposes only.**
